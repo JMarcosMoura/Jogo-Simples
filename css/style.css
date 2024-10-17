@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+
+body{
+    font-family: "Silkscreen", sans-serif;
+}
+
+.game-board {
+    width: 100%;
+    height: 700px;
+    border-bottom: 45px solid rgb(35, 160, 35);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEE7, #E0F6FF);
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 1.5s infinite linear;
+}
+
+.mario {
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+.clouds {
+    position: absolute;
+    width: 550px;
+    animation: clouds-animation 20s infinite linear;
+}
+
+.game-menu {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #222; /* Ajuste de cor para melhor visualização */
+    padding: 40px;
+    text-align: center;
+    display: none; /* Continua invisível até ser ativada */
+}
+
+.game-menu button {
+    cursor: pointer;
+    padding: 5px;
+    background-color: #222;
+    border: none;
+    margin-top: 40px;
+    color: white;
+    border-radius: 20px;
+    font-family: "Silkscreen", sans-serif;
+}
+
+.game-menu button:hover {
+    color: darkgoldenrod;
+}
+
+
+@keyframes pipe-animation {
+    from {
+        right: -80px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+    40% {
+        bottom: 180px;
+    }
+    50% {
+        bottom: 180px;
+    }
+    60% {
+        bottom: 180px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -550px;
+    }
+
+    to{
+        right: 100%;
+    }
+}
