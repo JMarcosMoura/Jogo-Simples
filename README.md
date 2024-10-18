@@ -2,7 +2,7 @@
 
 ##
 
-Joguinho simples feito com **HTML, CSS e JavaScript** 😺
+Joguinho básico feito com **HTML, CSS e JavaScript** 😺
 
 ##
 
