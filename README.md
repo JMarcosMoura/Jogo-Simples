@@ -1,8 +1,8 @@
-### Super Mario
+### Jogo
 
 ##
 
-Joguinho simples feito com **HTML, CSS e JavaScript**
+Joguinho simples feito com **HTML, CSS e JavaScript** 😺
 
 ##
 
