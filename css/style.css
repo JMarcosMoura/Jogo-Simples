@@ -6,25 +6,39 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
 
-body{
+
+html, body {
+    height: 100%; /* Garante que o body ocupa 100% da altura da tela */
+}
+
+body {
     font-family: "Silkscreen", sans-serif;
+    overflow: hidden;
 }
 
 .game-board {
     width: 100%;
-    height: 700px;
-    border-bottom: 45px solid rgb(35, 160, 35);
-    margin: 0 auto;
+    height: 90vh;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(#87CEE7, #E0F6FF);
+    background: linear-gradient(hsl(218, 64%, 58%), #6aa9c2);
 }
+
+.score {
+    position: absolute; 
+    padding: 15px;
+    color: #333;
+    font-size: 24px;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5);
+    font-family: "Silkscreen", sans-serif;
+}
+
 
 .pipe {
     position: absolute;
     bottom: 0;
     width: 80px;
-    animation: pipe-animation 1.5s infinite linear;
+    animation: pipe-animation 1.25s infinite linear;
 }
 
 .mario {
@@ -34,28 +48,48 @@ body{
 }
 
 .jump {
-    animation: jump 500ms ease-out;
+    animation: jump 400ms ease-out;
+}
+
+.grama{
+    position: absolute;
+    bottom: 0%;
+    height: 75px;
+}
+.grama-right{
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    height: 75px;
 }
 
 .clouds {
     position: absolute;
     width: 550px;
-    animation: clouds-animation 20s infinite linear;
+    animation: clouds-animation 25s infinite linear;
 }
 
 .game-menu {
+    width: 350px;
     color: white;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #222; /* Ajuste de cor para melhor visualização */
+    background-color: #222; 
     padding: 40px;
     text-align: center;
-    display: none; /* Continua invisível até ser ativada */
+    display: none;
+}
+
+.game-menu h2 {
+    margin-bottom: 10px;
+    font-size: 50px;
 }
 
 .game-menu button {
+    font-family: "Silkscreen", sans-serif;
+    font-size: medium;
     cursor: pointer;
     padding: 5px;
     background-color: #222;
@@ -63,7 +97,6 @@ body{
     margin-top: 40px;
     color: white;
     border-radius: 20px;
-    font-family: "Silkscreen", sans-serif;
 }
 
 .game-menu button:hover {
